@@ -1,0 +1,16 @@
+@import 'Landing';
+@import 'About';
+@import 'Skills';
+@import 'Project';
+
+* {
+    box-sizing: border-box;
+    
+}
+
+.App {
+    background-color: rgb(241, 241, 241);
+    font-family: 'Roboto',
+    sans-serif;
+}
+
