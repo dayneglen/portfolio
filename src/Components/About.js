@@ -2,26 +2,28 @@ import React from 'react';
 
 const About = () => {
     return (
-      <section id="about" className="about-container">
+      <section id="about" className="about-section">
         <h1>About Me</h1>
-        <p>
-          What first attracted me to web development is my love of learning.
-          Learning has always been a huge passion, and web development gives me
-          so many opportunities to keep learning and improving. I decided to
-          take the next big step of becoming a web developer and enrolled myself
-          in Devmountain. Since then my love for technology and web has only grown
-          immensely.
-        </p>
-        <p>
-          I've always had a passion for mental health, and I have wanted to help
-          out where I can. One thing that drew me into web development is the
-          ability to combie mental health services with technology to make
-          access to mental health treatment easier and better for both clients
-          and therapists.
-        </p>
-        <p>
-            When I'm not coding you'll see me hiking and exploring the great mountains of Utah, reading a book by a roaring fire, or doing something else amazing.
-        </p>
+        <section className="about-container">
+          <section className="about-me-paragraphs">
+            <p>
+              What first attracted me to web development is my love of learning.
+              Learning has always been a huge passion, and web development gives
+              me so many opportunities to keep learning and improving. I decided
+              to take the next big step of becoming a web developer and enrolled
+              myself in Devmountain. Since then my love for technology and web
+              has only grown immensely. I especially love the logic behind
+              Javascript, React and NodeJS.
+            </p>
+          </section>
+          <div className="about-img-container">
+            <img
+              className="profile-pic"
+              src={require("../images/profile/dayne-bio-pic.jpg").default}
+              alt="About Me"
+            />
+          </div>
+        </section>
       </section>
     );
 }
