@@ -9,7 +9,7 @@ const Skills = () => {
         <Fade left duration={2000} delay={1000}>
           <h2>Skills</h2>
         </Fade>
-        <Fade right duraction={2000} delay={1000}>
+        <Fade right duraction={2000} delay={2000}>
           <div className="skill-list">
             <i className="fab fa-react" aria-hidden="true">
               <span>REACT</span>
@@ -32,7 +32,7 @@ const Skills = () => {
 
             <div>
               <img
-                className="skill-img"
+                className="skill-img center"
                 src={require(`../images/skills/redux.png`).default}
                 alt="redux"
               />
@@ -43,7 +43,7 @@ const Skills = () => {
             </i>
             <div>
               <img
-                className="skill-img"
+                className="skill-img center"
                 src={require(`../images/skills/postgresql.png`).default}
                 alt="postgres"
               />
@@ -51,7 +51,7 @@ const Skills = () => {
             </div>
             <div className="git-img">
               <img
-                className="skill-img"
+                className="skill-img center"
                 src={require(`../images/skills/git.png`).default}
                 alt="git"
               />

@@ -5,7 +5,9 @@
 
 .landing-container {
   height: 100vh;
-  background-color: #294366;
+  background-image: url("../images/profile/Background.jpg");
+  background-position: center;
+  background-size: cover;
   color: #fff;
   padding-top: 200px;
   display: -webkit-box;
@@ -21,24 +23,44 @@
 }
 
 .landing-container h1 {
-  font-size: 2rem;
-  margin-bottom: 50px;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  border: 2px solid #fff;
+  letter-spacing: 4px;
+  padding: 10px;
+  font-weight: bold;
 }
 
 .landing-container h2 {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.landing-container ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.landing-container ul li {
+  margin: 4px;
+  font-size: 10px;
 }
 
 .welcome-container {
   text-align: center;
-  margin: 0 auto;
+  margin: 0px auto;
 }
 
 .about-arrow {
   font-size: 1.5rem;
   width: 150px;
-  margin: 100px auto;
+  margin: 50px auto;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -128,32 +150,58 @@
 }
 
 @media screen and (min-width: 768px) {
+  .landing-container {
+    padding-top: 300px;
+  }
   .landing-container h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    letter-spacing: 8px;
   }
   .landing-container h2 {
     font-size: 2rem;
+    letter-spacing: 2px;
+  }
+  .landing-container ul li {
+    font-size: 16px;
+    margin: 8px;
   }
 }
 
 @media screen and (min-width: 992px) {
   .landing-container h1 {
     font-size: 3.5rem;
+    letter-spacing: 10px;
   }
   .landing-container h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+  .landing-container ul li {
+    font-size: 20px;
   }
 }
 
 .about-section {
   background-color: #e6e6e6;
-  padding: 20px;
+  padding: 30px;
 }
 
 .about-section h1 {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.about-me-paragraphs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .about-container {
@@ -163,7 +211,12 @@
 
 .about-container p {
   margin: 20px 0;
-  text-align: center;
+  line-height: 1.4em;
+}
+
+.about-container a {
+  color: #000;
+  margin-left: 20px;
 }
 
 .profile-pic {
@@ -185,15 +238,15 @@
     display: flex;
   }
   .profile-pic {
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 300px;
+    margin-top: 75px;
   }
   .about-me-paragraphs {
     width: 500px;
   }
   .about-me-paragraphs p {
     margin: 20px;
-    font-size: 1.3rem;
   }
 }
 
@@ -213,13 +266,13 @@
   .profile-pic {
     height: 350px;
     width: 350px;
+    margin-top: 25px;
   }
   .about-me-paragraphs {
     width: 500px;
   }
   .about-me-paragraphs p {
     margin: 20px;
-    font-size: 1.6rem;
   }
 }
 
@@ -278,6 +331,7 @@
 
 .skill-list span {
   font-size: 0.8rem;
+  font-family: 'Raleway', sans-serif;
 }
 
 .skill-list div {
@@ -309,6 +363,9 @@
 .skill-img {
   height: 40px;
   width: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -345,6 +402,7 @@
   }
   .git-img {
     visibility: visible;
+    display: none;
   }
 }
 
@@ -357,7 +415,8 @@
     margin-bottom: 30px;
   }
   .skill-list i {
-    font-size: 100px;
+    font-size: 80px;
+    margin: 30px;
   }
   .skill-list span {
     font-size: 1.5rem;
@@ -377,15 +436,123 @@
 
 .projects-section {
   background-color: #294366;
+  color: #fff;
+  padding: 30px;
 }
 
 .projects-container {
   max-width: 275px;
+  margin: 0 auto;
+}
+
+.projects {
+  margin: 30px 0;
+}
+
+.projects-header {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .project-img {
-  height: 50px;
-  width: 50px;
+  height: 250px;
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-details h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 10px;
+}
+
+.project-details p {
+  margin: 20px 0;
+  line-height: 1.4em;
+}
+
+.noobtube-demo p {
+  margin: 5px 0;
+}
+
+.project-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.project-links a {
+  color: #fff;
+}
+
+.larger-screen {
+  display: none;
+  visibility: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .projects-container {
+    max-width: 750px;
+  }
+  .projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .project-img {
+    width: 300px;
+    height: 300px;
+    margin-top: 15px;
+  }
+  .project-details {
+    margin: 0 20px;
+  }
+  .phone-screen {
+    visibility: hidden;
+    display: none;
+  }
+  .larger-screen {
+    display: inline;
+    visibility: visible;
+  }
+  .current-projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .projects-container {
+    max-width: 900px;
+  }
+  .project-img {
+    height: 400px;
+    width: 400px;
+  }
+  .project-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-size: 17px;
+  }
 }
 
 .contact-container {
@@ -438,7 +605,7 @@
 
 .contact-me button {
   border: none;
-  background-color: #d86565;
+  background-color: #294366;
   color: white;
   height: 30px;
   width: 275px;
@@ -522,6 +689,6 @@
 
 .App {
   background-color: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 /*# sourceMappingURL=styles.css.map */

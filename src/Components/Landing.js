@@ -8,11 +8,30 @@ const Landing = () => {
       <section className="landing-container">
         <Fade duration={3000} delay={500}>
           <section className="welcome-container">
-            <h1>Hi, I'm Dayne!</h1>
-            <h2>I'm a Full Stack Web Developer</h2>
+            <h1>DAYNE PORTER</h1>
+            <h2>Full Stack Web Developer</h2>
+            <Fade delay={1000} left>
+              <ul>
+                <li>HTML</li>
+                <li>|</li>
+                <li>CSS</li>
+                <li>|</li>
+                <li>REACT</li>
+                <li>|</li>
+                <li>NODEJS</li>
+                <li>|</li>
+                <li>POSTGRESQL</li>
+              </ul>
+            </Fade>
           </section>
         </Fade>
-        <Link activeClass='active' to='about' spy={true} smooth={true} duration={1000}>
+        <Link
+          activeClass="active"
+          to="about"
+          spy={true}
+          smooth={true}
+          duration={1000}
+        >
           <section className="about-arrow">
             <Fade duration={2000} delay={1500}>
               <h3 className="welcome-container">About Me</h3>

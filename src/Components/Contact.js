@@ -1,20 +1,26 @@
-import React, {useState} from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 
 const Contact = () => {
-    const [emailInputs, setEmailInput] = useState({
-      email: "",
-      name: "",
-      message: "",
-      sent: false,
-    });
+  const [emailInputs, setEmailInput] = useState({
+    email: "",
+    name: "",
+    message: "",
+    sent: false,
+  });
 
-    const handleEmailChange = (e) => {
-      const { name, value } = e.target;
-      setEmailInput({ ...emailInputs, [name]: value });
-    };
+  const handleEmailChange = (e) => {
+    const { name, value } = e.target;
+    setEmailInput({ ...emailInputs, [name]: value });
+  };
 
-    const sendContactEmail = () => {
+  const sendContactEmail = () => {
+    const { email, name, message } = emailInputs;
+    if (email === "" || name === "" || message === "") {
+     return alert(
+        "I'd love to talk with you! Please make sure you have an email, name, and message!"
+      );
+    } else {
       axios
         .post("/api/send-email", {
           name: emailInputs.name,
@@ -28,42 +34,42 @@ const Contact = () => {
           }, 3000);
         })
         .catch((err) => console.log(err));
-    };
+    }
+  };
 
-    return (
-      <section className="contact-container">
-        <section className="contact-me">
-          <h1>Contact Me</h1>
-          {emailInputs.sent ? (
-            <section className="sent-message">
-              <p>Message Sent!</p>
-              <p>Thanks for sending me an email!</p>
-            </section>
-          ) : null}
-          <input
-            value={emailInputs.name}
-            name="name"
-            placeholder="Name"
-            onChange={(e) => handleEmailChange(e)}
-          />
-          <input
-            value={emailInputs.email}
-            name="email"
-            placeholder="Email"
-            onChange={(e) => handleEmailChange(e)}
-          />
-          <textarea
-            value={emailInputs.message}
-            name="message"
-            placeholder="Message"
-            onChange={(e) => handleEmailChange(e)}
-          />
-          <button onClick={sendContactEmail}>
-            Send Message
-          </button>
-        </section>
+  return (
+    <section className="contact-container">
+      <section className="contact-me">
+        <h1>Contact Me</h1>
+        {emailInputs.sent ? (
+          <section className="sent-message">
+            <p>Message Sent!</p>
+            <p>Thanks for sending me an email!</p>
+          </section>
+        ) : null}
+        <input
+          value={emailInputs.name}
+          name="name"
+          placeholder="Name"
+          onChange={(e) => handleEmailChange(e)}
+        />
+        <input
+          value={emailInputs.email}
+          type="email"
+          name="email"
+          placeholder="Email"
+          onChange={(e) => handleEmailChange(e)}
+        />
+        <textarea
+          value={emailInputs.message}
+          name="message"
+          placeholder="Message"
+          onChange={(e) => handleEmailChange(e)}
+        />
+        <button onClick={sendContactEmail}>Send Message</button>
       </section>
-    );
-}
+    </section>
+  );
+};
 
 export default Contact;
